@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<root>
+    <word>
+        <english>butterfly</english>
+        <deutsch>schmeterling</deutsch>
+        <srpski>leptir</srpski>
+        <bosanski>leptir</bosanski>
+    </word>
+    <word>
+        <english>toilet</english>
+        <deutsch>bade</deutsch>
+        <srpski>toalet</srpski>
+        <bosanski>toalet</bosanski>
+    </word>
+</root>

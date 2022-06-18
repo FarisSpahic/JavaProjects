@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane id="gridPane" prefHeight="400.0" prefWidth="600.0" vgap="10.0" hgap="10.0" alignment="CENTER" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FormUIController">
+    <stylesheets>
+        <URL value="@/css/formui.css"/>
+    </stylesheets>
+    
+     <children>
+        <Label text="Forma" GridPane.rowIndex="0" GridPane.columnIndex="0" fx:id="naslov">
+            <GridPane.margin>
+                <Insets top="5.0" left="25.0" right="25.0" bottom="20.0"/>
+            </GridPane.margin>
+        </Label>
+  
+        <Label text="Ime: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="firstName" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="Prezime: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="lastName" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        
+        <Label text="Adresa: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="adress" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        
+        <Label text="Trajanje ugovora(Godina): " GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        
+
+        <RadioButton fx:id="yr1" GridPane.rowIndex="4" GridPane.columnIndex="1">
+            <text>1 godina </text>
+            
+            <toggleGroup>
+                <ToggleGroup fx:id="years"></ToggleGroup>
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="yr2" text="2 godine " toggleGroup="$years" GridPane.rowIndex="4" GridPane.columnIndex="2"/>
+        
+        <Label text="Protok(GB): " GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <ChoiceBox fx:id="cbP" GridPane.rowIndex="5" GridPane.columnIndex="1">
+            <items>
+             <FXCollections fx:factory="observableArrayList">
+                 <String fx:value="1"/>
+                 <String fx:value="5"/>
+                 <String fx:value="10"/>
+                 <String fx:value="100"/>
+                 <String fx:value="Flat"/>
+             </FXCollections>
+            </items>
+        </ChoiceBox>
+        
+        <Label text="Brzina protoka(Mbit): " GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <ChoiceBox fx:id="cbBP" GridPane.rowIndex="6" GridPane.columnIndex="1">
+            <items>
+             <FXCollections fx:factory="observableArrayList">
+                 <String fx:value="2"/>
+                 <String fx:value="5"/>
+                 <String fx:value="10"/>
+                 <String fx:value="20"/>
+                 <String fx:value="50"/>
+                 <String fx:value="100"/>
+             </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label text="Delete Sale with index: " GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="idxInputField" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        
+        <Button text="Submit" fx:id="submitBtn" GridPane.rowIndex="8" GridPane.columnIndex="0" defaultButton="true" onAction="#onSubmit"/>
+        <Button text="Delete" fx:id="backBtn" GridPane.rowIndex="8" GridPane.columnIndex="1" onAction="#onDelete"/>
+        <Button text="Print All Sales" fx:id="printBtn" GridPane.rowIndex="8" GridPane.columnIndex="2" onAction="#onPrint"/>
+    </children>
+</GridPane>

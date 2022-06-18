@@ -1,0 +1,27 @@
+*{
+    -fx-padding: 5px 5px 5px 5px;
+    -fx-font-family: "Arial" ;
+    -fx-margin: 5px 5px 5px 5px;
+  
+}
+#naslov{
+    -fx-font-size: 34px;
+    -fx-margin-left: 20px;
+}
+
+
+.label{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.button:hover{
+    -fx-background-color: black;
+    -fx-text-fill: yellow;
+    
+}
+.button{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
